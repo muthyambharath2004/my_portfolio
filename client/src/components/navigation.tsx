@@ -8,7 +8,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-gray-900">Portfolio</span>
+              <span className="text-2xl font-bold text-gray-900">Muthyam Bharath Kumar</span>
             </div>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-8">

@@ -5,7 +5,7 @@ export default function ContactInfo() {
     <div className="bg-gradient-to-br from-primary to-blue-700 p-8 lg:p-12 text-white">
       <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
       <p className="text-blue-100 mb-8 text-lg leading-relaxed">
-        Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'm always excited to connect with fellow creatives and innovators.
+        Whether you have a software development project, internship opportunity, or job offer, I'm always excited to connect and discuss how I can contribute to your team.
       </p>
       
       <div className="space-y-6">
@@ -17,7 +17,7 @@ export default function ContactInfo() {
           </div>
           <div className="ml-4">
             <h3 className="font-semibold">Location</h3>
-            <p className="text-blue-100">San Francisco, CA</p>
+            <p className="text-blue-100">Hyderabad, India</p>
           </div>
         </div>
         
@@ -29,7 +29,7 @@ export default function ContactInfo() {
           </div>
           <div className="ml-4">
             <h3 className="font-semibold">Email</h3>
-            <p className="text-blue-100">hello@portfolio.com</p>
+            <p className="text-blue-100">muthyambharath2004@gmail.com</p>
           </div>
         </div>
         
@@ -41,7 +41,7 @@ export default function ContactInfo() {
           </div>
           <div className="ml-4">
             <h3 className="font-semibold">Phone</h3>
-            <p className="text-blue-100">+1 (555) 123-4567</p>
+            <p className="text-blue-100">+91 9652863799</p>
           </div>
         </div>
       </div>

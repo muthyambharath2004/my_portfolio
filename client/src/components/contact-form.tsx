@@ -56,7 +56,7 @@ export default function ContactForm() {
     onError: (error: Error) => {
       toast({
         title: "Oops! Something went wrong",
-        description: error.message || "Please try again or contact me directly at hello@portfolio.com",
+        description: error.message || "Please try again or contact me directly at muthyambharath2004@gmail.com",
         variant: "destructive",
         duration: 5000,
       });
@@ -143,10 +143,10 @@ export default function ContactForm() {
                       <SelectValue placeholder="Select a subject" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="project">New Project Inquiry</SelectItem>
-                      <SelectItem value="collaboration">Collaboration Opportunity</SelectItem>
-                      <SelectItem value="consultation">Consultation Request</SelectItem>
-                      <SelectItem value="hiring">Job Opportunity</SelectItem>
+                      <SelectItem value="job">Job Opportunity</SelectItem>
+                      <SelectItem value="internship">Internship Opportunity</SelectItem>
+                      <SelectItem value="project">Project Collaboration</SelectItem>
+                      <SelectItem value="freelance">Freelance Work</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -162,7 +162,7 @@ export default function ContactForm() {
                     rows={6}
                     {...form.register("message")}
                     onChange={(e) => handleMessageChange(e.target.value)}
-                    placeholder="Tell me about your project, ideas, or how I can help you..."
+                    placeholder="Tell me about your job opportunity, project requirements, or how I can contribute to your team..."
                     maxLength={2000}
                     className="hover:border-gray-400 transition-colors resize-vertical"
                   />
@@ -182,7 +182,7 @@ export default function ContactForm() {
                     {...form.register("newsletter")}
                   />
                   <Label htmlFor="newsletter" className="text-sm">
-                    Subscribe to occasional updates about my work and industry insights
+                    Keep me updated about future opportunities and your company updates
                   </Label>
                 </div>
                 

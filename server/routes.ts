@@ -18,7 +18,7 @@ const createEmailTransporter = () => {
     },
   };
 
-  return nodemailer.createTransporter(emailConfig);
+  return nodemailer.createTransport(emailConfig);
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -70,18 +70,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Email to portfolio owner
         const ownerEmailOptions = {
           from: process.env.SMTP_USER || 'noreply@portfolio.com',
-          to: process.env.CONTACT_EMAIL || 'hello@portfolio.com',
-          subject: `New Contact Form Submission: ${validatedData.subject}`,
+          to: process.env.CONTACT_EMAIL || 'muthyambharath2004@gmail.com',
+          subject: `New Contact from Portfolio: ${validatedData.subject}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #2563EB;">New Contact Form Submission</h2>
+              <h2 style="color: #2563EB;">New Contact from Portfolio Website</h2>
               
               <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
                 <h3>Contact Information</h3>
                 <p><strong>Name:</strong> ${validatedData.firstName} ${validatedData.lastName}</p>
                 <p><strong>Email:</strong> ${validatedData.email}</p>
                 <p><strong>Subject:</strong> ${validatedData.subject}</p>
-                <p><strong>Newsletter Subscription:</strong> ${validatedData.newsletter ? 'Yes' : 'No'}</p>
+                <p><strong>Wants Updates:</strong> ${validatedData.newsletter ? 'Yes' : 'No'}</p>
                 <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
               </div>
               
@@ -118,17 +118,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
               
               <p>In the meantime, feel free to:</p>
               <ul>
-                <li>Check out my portfolio at <a href="/" style="color: #2563EB;">Portfolio</a></li>
+                <li>Check out my projects and skills on my <a href="/" style="color: #2563EB;">portfolio</a></li>
                 <li>Connect with me on <a href="#" style="color: #2563EB;">LinkedIn</a></li>
                 <li>Follow my work on <a href="#" style="color: #2563EB;">GitHub</a></li>
               </ul>
               
-              <p>Best regards,<br>Portfolio Team</p>
+              <p>Best regards,<br>Muthyam Bharath Kumar</p>
               
               <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">
               <p style="font-size: 12px; color: #64748b;">
                 This is an automated response. Please do not reply to this email.
-                If you need immediate assistance, contact us directly at hello@portfolio.com
+                If you need immediate assistance, contact me directly at muthyambharath2004@gmail.com
               </p>
             </div>
           `,
