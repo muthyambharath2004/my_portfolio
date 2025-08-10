@@ -1,0 +1,580 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Contact - Professional Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#2563EB',
+                        'secondary': '#64748B',
+                        'success': '#10B981',
+                        'error': '#EF4444',
+                        'warning': '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-gray-50 min-h-screen">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold text-gray-900">Portfolio</span>
+                    </div>
+                    <div class="hidden md:block ml-10">
+                        <div class="flex items-baseline space-x-8">
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">About</a>
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">Work</a>
+                            <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">Experience</a>
+                            <a href="#" class="text-primary font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="ml-4 text-gray-600 hover:text-primary transition-colors duration-200">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-primary transition-colors duration-200">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="bg-white py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Let's Work <span class="text-primary">Together</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can collaborate to create something amazing.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-600">
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-primary mr-3"></i>
+                        <span data-bind="contact.email">hello@portfolio.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-primary mr-3"></i>
+                        <span data-bind="contact.phone">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-primary mr-3"></i>
+                        <span>Usually responds within 24h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Contact Form Section -->
+    <section class="py-16 lg:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-2">
+                    <!-- Contact Information -->
+                    <div class="bg-gradient-to-br from-primary to-blue-700 p-8 lg:p-12 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+                        <p class="text-blue-100 mb-8 text-lg leading-relaxed">
+                            Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'm always excited to connect with fellow creatives and innovators.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold">Location</h3>
+                                    <p class="text-blue-100" data-bind="contact.location">San Francisco, CA</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold">Email</h3>
+                                    <p class="text-blue-100" data-bind="contact.email">hello@portfolio.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-phone text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold">Phone</h3>
+                                    <p class="text-blue-100" data-bind="contact.phone">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h3 class="font-semibold mb-4">Follow Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200">
+                                    <i class="fab fa-twitter text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200">
+                                    <i class="fab fa-linkedin text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200">
+                                    <i class="fab fa-github text-white"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-200">
+                                    <i class="fab fa-dribbble text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="p-8 lg:p-12">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-8">Send Message</h2>
+                        
+                        <!-- @FUNCTIONALITY: Form should implement client-side and server-side validation, CAPTCHA/honeypot spam protection, and email notifications -->
+                        <form id="contactForm" class="space-y-6" data-implementation="Should validate all fields, sanitize inputs, and send email notifications">
+                            
+                            <!-- Honeypot field for spam protection -->
+                            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off" />
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="relative">
+                                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                    <input 
+                                        type="text" 
+                                        id="firstName" 
+                                        name="firstName" 
+                                        required
+                                        data-bind="form.firstName"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 hover:border-gray-400"
+                                        placeholder="John"
+                                    >
+                                    <div class="error-message hidden text-error text-sm mt-1">
+                                        <i class="fas fa-exclamation-circle mr-1"></i>
+                                        First name is required
+                                    </div>
+                                </div>
+                                
+                                <div class="relative">
+                                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                    <input 
+                                        type="text" 
+                                        id="lastName" 
+                                        name="lastName" 
+                                        required
+                                        data-bind="form.lastName"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 hover:border-gray-400"
+                                        placeholder="Doe"
+                                    >
+                                    <div class="error-message hidden text-error text-sm mt-1">
+                                        <i class="fas fa-exclamation-circle mr-1"></i>
+                                        Last name is required
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="relative">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    data-bind="form.email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 hover:border-gray-400"
+                                    placeholder="john.doe@example.com"
+                                >
+                                <div class="error-message hidden text-error text-sm mt-1">
+                                    <i class="fas fa-exclamation-circle mr-1"></i>
+                                    Please enter a valid email address
+                                </div>
+                            </div>
+                            
+                            <div class="relative">
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                                <select 
+                                    id="subject" 
+                                    name="subject" 
+                                    required
+                                    data-bind="form.subject"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 hover:border-gray-400 bg-white"
+                                >
+                                    <option value="">Select a subject</option>
+                                    <option value="project">New Project Inquiry</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                    <option value="consultation">Consultation Request</option>
+                                    <option value="hiring">Job Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="error-message hidden text-error text-sm mt-1">
+                                    <i class="fas fa-exclamation-circle mr-1"></i>
+                                    Please select a subject
+                                </div>
+                            </div>
+                            
+                            <div class="relative">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="6" 
+                                    required
+                                    data-bind="form.message"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 hover:border-gray-400 resize-vertical"
+                                    placeholder="Tell me about your project, ideas, or how I can help you..."
+                                    maxlength="2000"
+                                ></textarea>
+                                <div class="flex justify-between items-center mt-2">
+                                    <div class="error-message hidden text-error text-sm">
+                                        <i class="fas fa-exclamation-circle mr-1"></i>
+                                        Message is required (minimum 20 characters)
+                                    </div>
+                                    <div class="text-sm text-gray-500" id="charCount">0/2000</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input 
+                                    id="newsletter" 
+                                    name="newsletter" 
+                                    type="checkbox" 
+                                    data-bind="form.newsletter"
+                                    class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+                                >
+                                <label for="newsletter" class="ml-3 block text-sm text-gray-700">
+                                    Subscribe to occasional updates about my work and industry insights
+                                </label>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="pt-4">
+                                <button 
+                                    type="submit" 
+                                    id="submitBtn"
+                                    data-event="click:handleSubmit"
+                                    data-implementation="Should validate form, show loading state, and handle success/error responses"
+                                    class="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                                >
+                                    <span class="submit-text">Send Message</span>
+                                    <span class="loading-text hidden">
+                                        <i class="fas fa-spinner fa-spin mr-2"></i>
+                                        Sending...
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <!-- Success Message -->
+                            <div id="successMessage" class="hidden bg-green-50 border border-green-200 rounded-lg p-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-success text-xl mr-3"></i>
+                                    <div>
+                                        <h3 class="text-success font-semibold">Message Sent Successfully!</h3>
+                                        <p class="text-green-700 text-sm mt-1">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="hidden bg-red-50 border border-red-200 rounded-lg p-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-exclamation-triangle text-error text-xl mr-3"></i>
+                                    <div>
+                                        <h3 class="text-error font-semibold">Oops! Something went wrong</h3>
+                                        <p class="text-red-700 text-sm mt-1">Please try again or contact me directly at <span data-bind="contact.email">hello@portfolio.com</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Form Section -->
+
+    <!-- @COMPONENT: Additional Contact Methods -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Other Ways to Connect</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Prefer a different communication method? Here are some alternative ways to get in touch.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Schedule a Call</h3>
+                    <p class="text-gray-600 mb-4">Book a 30-minute consultation to discuss your project in detail.</p>
+                    <a href="#" class="inline-flex items-center text-primary hover:text-blue-700 font-medium transition-colors duration-200">
+                        Schedule Now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                    <p class="text-gray-600 mb-4">Quick questions? Send me a message on WhatsApp for faster response.</p>
+                    <a href="#" class="inline-flex items-center text-primary hover:text-blue-700 font-medium transition-colors duration-200">
+                        Chat on WhatsApp
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-linkedin text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">LinkedIn</h3>
+                    <p class="text-gray-600 mb-4">Connect with me professionally and stay updated with my latest work.</p>
+                    <a href="#" class="inline-flex items-center text-primary hover:text-blue-700 font-medium transition-colors duration-200">
+                        Connect on LinkedIn
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Additional Contact Methods -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Let's Create Something Amazing</h3>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        I'm passionate about creating digital experiences that make a difference. Ready to start your next project?
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Web Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Consulting</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Maintenance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">
+                    © <span data-bind="currentYear">2024</span> Portfolio. All rights reserved. Built with passion and modern web technologies.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Character count for message textarea
+            const messageField = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+            
+            if (messageField && charCount) {
+                messageField.addEventListener('input', function() {
+                    const currentLength = this.value.length;
+                    charCount.textContent = `${currentLength}/2000`;
+                    
+                    if (currentLength > 2000) {
+                        charCount.classList.add('text-error');
+                    } else {
+                        charCount.classList.remove('text-error');
+                    }
+                });
+            }
+
+            // Form validation and submission
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Clear previous error states
+                    const errorMessages = document.querySelectorAll('.error-message');
+                    errorMessages.forEach(msg => msg.classList.add('hidden'));
+                    
+                    const inputs = document.querySelectorAll('input, select, textarea');
+                    inputs.forEach(input => {
+                        input.classList.remove('border-error');
+                    });
+                    
+                    // Hide any previous success/error messages
+                    document.getElementById('successMessage').classList.add('hidden');
+                    document.getElementById('errorMessage').classList.add('hidden');
+                    
+                    // Basic validation
+                    let isValid = true;
+                    
+                    // Validate required fields
+                    const requiredFields = ['firstName', 'lastName', 'email', 'subject', 'message'];
+                    requiredFields.forEach(fieldName => {
+                        const field = document.getElementById(fieldName);
+                        const errorMsg = field.parentElement.querySelector('.error-message');
+                        
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('border-error');
+                            if (errorMsg) errorMsg.classList.remove('hidden');
+                        }
+                    });
+                    
+                    // Validate email format
+                    const email = document.getElementById('email');
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (email.value && !emailRegex.test(email.value)) {
+                        isValid = false;
+                        email.classList.add('border-error');
+                        const emailErrorMsg = email.parentElement.querySelector('.error-message');
+                        if (emailErrorMsg) emailErrorMsg.classList.remove('hidden');
+                    }
+                    
+                    // Validate message length
+                    const message = document.getElementById('message');
+                    if (message.value.trim().length < 20) {
+                        isValid = false;
+                        message.classList.add('border-error');
+                        const msgErrorMsg = message.parentElement.querySelector('.error-message');
+                        if (msgErrorMsg) msgErrorMsg.classList.remove('hidden');
+                    }
+                    
+                    if (isValid) {
+                        // Show loading state
+                        const submitBtn = document.getElementById('submitBtn');
+                        const submitText = submitBtn.querySelector('.submit-text');
+                        const loadingText = submitBtn.querySelector('.loading-text');
+                        
+                        submitBtn.disabled = true;
+                        submitText.classList.add('hidden');
+                        loadingText.classList.remove('hidden');
+                        
+                        // TODO: Implement actual form submission to backend
+                        // Simulate API call
+                        setTimeout(() => {
+                            // Reset button state
+                            submitBtn.disabled = false;
+                            submitText.classList.remove('hidden');
+                            loadingText.classList.add('hidden');
+                            
+                            // Simulate successful submission (90% success rate for demo)
+                            if (Math.random() > 0.1) {
+                                document.getElementById('successMessage').classList.remove('hidden');
+                                contactForm.reset();
+                                document.getElementById('charCount').textContent = '0/2000';
+                                
+                                // Scroll to success message
+                                document.getElementById('successMessage').scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'center' 
+                                });
+                            } else {
+                                document.getElementById('errorMessage').classList.remove('hidden');
+                                
+                                // Scroll to error message
+                                document.getElementById('errorMessage').scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'center' 
+                                });
+                            }
+                        }, 2000);
+                    }
+                });
+            }
+
+            // Add smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add focus states for better accessibility
+            const formElements = document.querySelectorAll('input, select, textarea, button');
+            formElements.forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.setAttribute('data-focused', 'true');
+                });
+                
+                element.addEventListener('blur', function() {
+                    this.removeAttribute('data-focused');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
